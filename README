@@ -1,0 +1,11 @@
+By Andrew Williams, 11/15/2015 Binghamton University
+
+Creates a FIFO queue of <numBufEntries> max size.
+If the queue is full, any process attempting to read from it will be blocked.
+If the queue is empty, any process attempting to write to it will be blocked.
+
+usage:
+type "make" to use the provided Makefile to compile mypipe.c into mypipe.ko
+type "insmod mypipe.ko <numBufEntries = N>" to insert the module into the kernel,
+     creating a queue of at most N entries.  Leaving off the numBufEntries
+     argument sets the queue to its default size of ten entries.
